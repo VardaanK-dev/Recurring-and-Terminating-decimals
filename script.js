@@ -108,22 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Theme selector
   function applyTheme(theme) {
-    document.body.className = theme;
-    themeSelect.value = theme;
-    try { localStorage.setItem("theme", theme); } catch {}
-  }
-  const savedTheme = (() => { try { return localStorage.getItem("theme"); } catch { return null; } })();
-  applyTheme(savedTheme || "light");
-  themeSelect.addEventListener("change", (e) => applyTheme(e.target.value));
-
-  // Volume control
-  if (volumeSlider) {
-    volumeSlider.addEventListener("input", (e) => {
-      const v = parseFloat(e.target.value);
-      document.querySelectorAll("audio").forEach(a => a.volume = v);
-    });
-  }
-
-  // Start game
-  nextQuestion();
-});
+    document.body.class
